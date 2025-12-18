@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Nacional das Sete Cidades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+    <div id="secao-login" class="login-overlay">
+        <div class="login-card">
+            <h2>Acesse sua Jornada</h2>
+            <div class="input-group">
+                <input type="text" id="login-nome" placeholder="Seu Nome">
+            </div>
+            <div class="input-group">
+                <select id="login-tipo">
+                    <option value="visitante">Visitante (Explorador)</option>
+                    <option value="guia">Guia do Parque</option>
+                </select>
+            </div>
+            <button id="btn-entrar" class="btn-primary">Entrar no Parque</button>
+        </div>
+    </div>
+
+    <div id="secao-principal" style="display:none">
+        
+        <header class="app-header">
+            <h1 id="msg-boas-vindas">Bem-vindo</h1>
+        </header>
+
+        <main class="container">
+            <section class="dashboard">
+                <div class="stats-info">
+                    <span>Progresso da Visita</span>
+                    <span id="percent-txt">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="main-progress-bar" class="progress-fill"></div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Pontos Turísticos</h2>
+                <div id="ponto-turistico-grid" class="grid-pontos"></div>
+            </section>
+
+            <section class="quiz-section">
+                <h2 class="section-title">Educação Patrimonial</h2>
+                <div id="quiz-root" class="quiz-card"></div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
